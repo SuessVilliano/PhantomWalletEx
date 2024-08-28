@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phantom Wallet Integration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #1f4037, #99f2c8);
+            color: white;
+            text-align: center;
+            padding: 50px;
+            animation: fadeIn 2s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .wallet-container {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease;
+        }
+
+        .wallet-container:hover {
+            transform: scale(1.05);
+        }
+
+        .connect-button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 30px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .connect-button:hover {
+            background-color: #45a049;
+        }
+
+        .connected-info {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+
+        .error-message {
+            color: red;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wallet-container">
+        <h1>Welcome to Our DApp</h1>
+        <p>Connect your Phantom wallet to get started</p>
+        <div id="wallet-status">
+            <button class="connect-button" id="connect-wallet">Connect Phantom Wallet</button>
+        </div>
+        <div id="transaction-area"></div>
+    </div>
+    <script src="phantom-wallet.js"></script>
+</body>
+</html>
